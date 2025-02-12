@@ -1,0 +1,25 @@
+/* st-char.css */
+
+/* page */
+
+.st-page {
+	position: relative;
+	height: 800px;
+	width: 1080px;
+	overflow: hidden;
+}
+
+.st-footer {
+	position: absolute;
+	bottom:0;
+}
+
+/* orbits */
+
+#orbits-in {
+	width: 200px;
+}
+
+#orbits-in label {
+	width: 80px;
+}
