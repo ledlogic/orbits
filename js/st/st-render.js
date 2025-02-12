@@ -42,6 +42,9 @@ st.render = {
 		ctx.moveTo(wpx/2, hpx/2-10);
 		ctx.lineTo(wpx/2, hpx/2+10);
 		ctx.stroke();
+		
+		var wapx = wpx - 50;
+		var hapx = hpx - 50;
 
 		var r = [];
 		var maxR = 0;
@@ -52,9 +55,15 @@ st.render = {
 		
 		for (var i=0; i< st.orbits.maxOrbits; i++) {
 			if (r[i]) {
+				var currR = r[i]/maxR * hapx /2;
+				
 				ctx.beginPath();
-				ctx.arc(wpx/2, hpx/2, r[i]/maxR * hpx /2, 0, 2 * Math.PI);
+				ctx.arc(wapx/2 +25, hapx/2+25, currR, 0, 2 * Math.PI);
 				ctx.stroke();
+				
+				var fontPx = 8;
+				ctx.font = fontPx + "px Bahnschrift";
+				ctx.fillText(r[i] + "AU", wapx/2+25, hapx/2 + currR+25-fontPx/2);
 			}
 		}
 
