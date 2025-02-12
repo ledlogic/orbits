@@ -23,3 +23,7 @@
 #orbits-in label {
 	width: 80px;
 }
+
+#orbits-out canvas {
+	border: 1px solid #c2c2c2;
+}
